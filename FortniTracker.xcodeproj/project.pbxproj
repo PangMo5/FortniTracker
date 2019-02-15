@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06961AB194D685DA261D74D7 /* Pods_FortniTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73156BD8D035F46AE10F2E3D /* Pods_FortniTracker.framework */; };
+		92DCCDDB21DC5CA8004047C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCCDDA21DC5CA8004047C1 /* AppDelegate.swift */; };
+		92DCCDDD21DC5CA8004047C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCCDDC21DC5CA8004047C1 /* ViewController.swift */; };
+		92DCCDE021DC5CA8004047C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DCCDDE21DC5CA8004047C1 /* Main.storyboard */; };
+		92DCCDE221DC5CAA004047C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92DCCDE121DC5CAA004047C1 /* Assets.xcassets */; };
+		92DCCDE521DC5CAA004047C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DCCDE321DC5CAA004047C1 /* LaunchScreen.storyboard */; };
+		92DCCDF021DC5CAA004047C1 /* FortniTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCCDEF21DC5CAA004047C1 /* FortniTrackerTests.swift */; };
+		92DCCDFB21DC5CAA004047C1 /* FortniTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCCDFA21DC5CAA004047C1 /* FortniTrackerUITests.swift */; };
+		92E0BB2A221661F900C7A058 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB24221661F900C7A058 /* Images.swift */; };
+		92E0BB2B221661F900C7A058 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB25221661F900C7A058 /* Base.swift */; };
+		92E0BB2C221661F900C7A058 /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB26221661F900C7A058 /* Ratings.swift */; };
+		92E0BB2D221661F900C7A058 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB27221661F900C7A058 /* Item.swift */; };
+		92E0BB2E221661F900C7A058 /* Featured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB28221661F900C7A058 /* Featured.swift */; };
+		92E0BB2F221661F900C7A058 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB29221661F900C7A058 /* Items.swift */; };
+		92E0BB312216649800C7A058 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB302216649800C7A058 /* User.swift */; };
+		92E0BB3422166A1F00C7A058 /* UserDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB3322166A1F00C7A058 /* UserDataBase.swift */; };
+		92E0BB3822166B8200C7A058 /* UserStatsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB3722166B8200C7A058 /* UserStatsBase.swift */; };
+		92E0BB3C22166D7F00C7A058 /* SoloStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB3B22166D7F00C7A058 /* SoloStat.swift */; };
+		92E0BB3E22166D8E00C7A058 /* DuoStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB3D22166D8E00C7A058 /* DuoStat.swift */; };
+		92E0BB4022166D9B00C7A058 /* SquadStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB3F22166D9B00C7A058 /* SquadStat.swift */; };
+		92E0BB4222166F5300C7A058 /* UserStatsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB4122166F5300C7A058 /* UserStatsData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92DCCDEC21DC5CAA004047C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92DCCDCF21DC5CA8004047C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92DCCDD621DC5CA8004047C1;
+			remoteInfo = FortniTracker;
+		};
+		92DCCDF721DC5CAA004047C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92DCCDCF21DC5CA8004047C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92DCCDD621DC5CA8004047C1;
+			remoteInfo = FortniTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		73156BD8D035F46AE10F2E3D /* Pods_FortniTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FortniTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92DCCDD721DC5CA8004047C1 /* FortniTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortniTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92DCCDDA21DC5CA8004047C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92DCCDDC21DC5CA8004047C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92DCCDDF21DC5CA8004047C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92DCCDE121DC5CAA004047C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92DCCDE421DC5CAA004047C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92DCCDE621DC5CAA004047C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92DCCDEB21DC5CAA004047C1 /* FortniTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortniTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92DCCDEF21DC5CAA004047C1 /* FortniTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortniTrackerTests.swift; sourceTree = "<group>"; };
+		92DCCDF121DC5CAA004047C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92DCCDF621DC5CAA004047C1 /* FortniTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortniTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92DCCDFA21DC5CAA004047C1 /* FortniTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortniTrackerUITests.swift; sourceTree = "<group>"; };
+		92DCCDFC21DC5CAA004047C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E0BB24221661F900C7A058 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		92E0BB25221661F900C7A058 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		92E0BB26221661F900C7A058 /* Ratings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
+		92E0BB27221661F900C7A058 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		92E0BB28221661F900C7A058 /* Featured.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Featured.swift; sourceTree = "<group>"; };
+		92E0BB29221661F900C7A058 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		92E0BB302216649800C7A058 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		92E0BB3322166A1F00C7A058 /* UserDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataBase.swift; sourceTree = "<group>"; };
+		92E0BB3722166B8200C7A058 /* UserStatsBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsBase.swift; sourceTree = "<group>"; };
+		92E0BB3B22166D7F00C7A058 /* SoloStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoloStat.swift; sourceTree = "<group>"; };
+		92E0BB3D22166D8E00C7A058 /* DuoStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuoStat.swift; sourceTree = "<group>"; };
+		92E0BB3F22166D9B00C7A058 /* SquadStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadStat.swift; sourceTree = "<group>"; };
+		92E0BB4122166F5300C7A058 /* UserStatsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsData.swift; sourceTree = "<group>"; };
+		B40F504163AC2A6D065E0D24 /* Pods-FortniTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortniTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FortniTracker/Pods-FortniTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		FED6A6B538F4982ECCD889CC /* Pods-FortniTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortniTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-FortniTracker/Pods-FortniTracker.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92DCCDD421DC5CA8004047C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06961AB194D685DA261D74D7 /* Pods_FortniTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DCCDE821DC5CAA004047C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DCCDF321DC5CAA004047C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C844005D8F98C83290412CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73156BD8D035F46AE10F2E3D /* Pods_FortniTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92DCCDCE21DC5CA8004047C1 = {
+			isa = PBXGroup;
+			children = (
+				92DCCDD921DC5CA8004047C1 /* FortniTracker */,
+				92DCCDEE21DC5CAA004047C1 /* FortniTrackerTests */,
+				92DCCDF921DC5CAA004047C1 /* FortniTrackerUITests */,
+				92DCCDD821DC5CA8004047C1 /* Products */,
+				B61751C0F6D8054590EF1A58 /* Pods */,
+				1C844005D8F98C83290412CE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		92DCCDD821DC5CA8004047C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92DCCDD721DC5CA8004047C1 /* FortniTracker.app */,
+				92DCCDEB21DC5CAA004047C1 /* FortniTrackerTests.xctest */,
+				92DCCDF621DC5CAA004047C1 /* FortniTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92DCCDD921DC5CA8004047C1 /* FortniTracker */ = {
+			isa = PBXGroup;
+			children = (
+				92E0BB322216669C00C7A058 /* API */,
+				92E0BB212216619900C7A058 /* Models */,
+				92E0BB22221661A500C7A058 /* Views */,
+				92E0BB23221661AB00C7A058 /* ViewModels */,
+				92DCCDDA21DC5CA8004047C1 /* AppDelegate.swift */,
+				92DCCDDC21DC5CA8004047C1 /* ViewController.swift */,
+				92DCCDDE21DC5CA8004047C1 /* Main.storyboard */,
+				92DCCDE121DC5CAA004047C1 /* Assets.xcassets */,
+				92DCCDE321DC5CAA004047C1 /* LaunchScreen.storyboard */,
+				92DCCDE621DC5CAA004047C1 /* Info.plist */,
+			);
+			path = FortniTracker;
+			sourceTree = "<group>";
+		};
+		92DCCDEE21DC5CAA004047C1 /* FortniTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				92DCCDEF21DC5CAA004047C1 /* FortniTrackerTests.swift */,
+				92DCCDF121DC5CAA004047C1 /* Info.plist */,
+			);
+			path = FortniTrackerTests;
+			sourceTree = "<group>";
+		};
+		92DCCDF921DC5CAA004047C1 /* FortniTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92DCCDFA21DC5CAA004047C1 /* FortniTrackerUITests.swift */,
+				92DCCDFC21DC5CAA004047C1 /* Info.plist */,
+			);
+			path = FortniTrackerUITests;
+			sourceTree = "<group>";
+		};
+		92E0BB212216619900C7A058 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92E0BB25221661F900C7A058 /* Base.swift */,
+				92E0BB28221661F900C7A058 /* Featured.swift */,
+				92E0BB24221661F900C7A058 /* Images.swift */,
+				92E0BB27221661F900C7A058 /* Item.swift */,
+				92E0BB29221661F900C7A058 /* Items.swift */,
+				92E0BB26221661F900C7A058 /* Ratings.swift */,
+				92E0BB302216649800C7A058 /* User.swift */,
+				92E0BB3322166A1F00C7A058 /* UserDataBase.swift */,
+				92E0BB4122166F5300C7A058 /* UserStatsData.swift */,
+				92E0BB3722166B8200C7A058 /* UserStatsBase.swift */,
+				92E0BB3B22166D7F00C7A058 /* SoloStat.swift */,
+				92E0BB3D22166D8E00C7A058 /* DuoStat.swift */,
+				92E0BB3F22166D9B00C7A058 /* SquadStat.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		92E0BB22221661A500C7A058 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		92E0BB23221661AB00C7A058 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		92E0BB322216669C00C7A058 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B61751C0F6D8054590EF1A58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B40F504163AC2A6D065E0D24 /* Pods-FortniTracker.debug.xcconfig */,
+				FED6A6B538F4982ECCD889CC /* Pods-FortniTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92DCCDD621DC5CA8004047C1 /* FortniTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92DCCDFF21DC5CAA004047C1 /* Build configuration list for PBXNativeTarget "FortniTracker" */;
+			buildPhases = (
+				BDB6EDC27B786642CACD7E1D /* [CP] Check Pods Manifest.lock */,
+				92DCCDD321DC5CA8004047C1 /* Sources */,
+				92DCCDD421DC5CA8004047C1 /* Frameworks */,
+				92DCCDD521DC5CA8004047C1 /* Resources */,
+				2BCF4F26EDF628EA4E089393 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FortniTracker;
+			productName = FortniTracker;
+			productReference = 92DCCDD721DC5CA8004047C1 /* FortniTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92DCCDEA21DC5CAA004047C1 /* FortniTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92DCCE0221DC5CAA004047C1 /* Build configuration list for PBXNativeTarget "FortniTrackerTests" */;
+			buildPhases = (
+				92DCCDE721DC5CAA004047C1 /* Sources */,
+				92DCCDE821DC5CAA004047C1 /* Frameworks */,
+				92DCCDE921DC5CAA004047C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92DCCDED21DC5CAA004047C1 /* PBXTargetDependency */,
+			);
+			name = FortniTrackerTests;
+			productName = FortniTrackerTests;
+			productReference = 92DCCDEB21DC5CAA004047C1 /* FortniTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		92DCCDF521DC5CAA004047C1 /* FortniTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92DCCE0521DC5CAA004047C1 /* Build configuration list for PBXNativeTarget "FortniTrackerUITests" */;
+			buildPhases = (
+				92DCCDF221DC5CAA004047C1 /* Sources */,
+				92DCCDF321DC5CAA004047C1 /* Frameworks */,
+				92DCCDF421DC5CAA004047C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92DCCDF821DC5CAA004047C1 /* PBXTargetDependency */,
+			);
+			name = FortniTrackerUITests;
+			productName = FortniTrackerUITests;
+			productReference = 92DCCDF621DC5CAA004047C1 /* FortniTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92DCCDCF21DC5CA8004047C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = ShirouCo;
+				TargetAttributes = {
+					92DCCDD621DC5CA8004047C1 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					92DCCDEA21DC5CAA004047C1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 92DCCDD621DC5CA8004047C1;
+					};
+					92DCCDF521DC5CAA004047C1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 92DCCDD621DC5CA8004047C1;
+					};
+				};
+			};
+			buildConfigurationList = 92DCCDD221DC5CA8004047C1 /* Build configuration list for PBXProject "FortniTracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92DCCDCE21DC5CA8004047C1;
+			productRefGroup = 92DCCDD821DC5CA8004047C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92DCCDD621DC5CA8004047C1 /* FortniTracker */,
+				92DCCDEA21DC5CAA004047C1 /* FortniTrackerTests */,
+				92DCCDF521DC5CAA004047C1 /* FortniTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92DCCDD521DC5CA8004047C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DCCDE521DC5CAA004047C1 /* LaunchScreen.storyboard in Resources */,
+				92DCCDE221DC5CAA004047C1 /* Assets.xcassets in Resources */,
+				92DCCDE021DC5CA8004047C1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DCCDE921DC5CAA004047C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DCCDF421DC5CAA004047C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BCF4F26EDF628EA4E089393 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FortniTracker/Pods-FortniTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTheme/RxTheme.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTheme.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FortniTracker/Pods-FortniTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDB6EDC27B786642CACD7E1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FortniTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92DCCDD321DC5CA8004047C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E0BB2F221661F900C7A058 /* Items.swift in Sources */,
+				92E0BB2E221661F900C7A058 /* Featured.swift in Sources */,
+				92E0BB312216649800C7A058 /* User.swift in Sources */,
+				92E0BB4022166D9B00C7A058 /* SquadStat.swift in Sources */,
+				92E0BB3E22166D8E00C7A058 /* DuoStat.swift in Sources */,
+				92E0BB3C22166D7F00C7A058 /* SoloStat.swift in Sources */,
+				92E0BB4222166F5300C7A058 /* UserStatsData.swift in Sources */,
+				92DCCDDD21DC5CA8004047C1 /* ViewController.swift in Sources */,
+				92E0BB2B221661F900C7A058 /* Base.swift in Sources */,
+				92E0BB2A221661F900C7A058 /* Images.swift in Sources */,
+				92E0BB2C221661F900C7A058 /* Ratings.swift in Sources */,
+				92E0BB3822166B8200C7A058 /* UserStatsBase.swift in Sources */,
+				92E0BB2D221661F900C7A058 /* Item.swift in Sources */,
+				92E0BB3422166A1F00C7A058 /* UserDataBase.swift in Sources */,
+				92DCCDDB21DC5CA8004047C1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DCCDE721DC5CAA004047C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DCCDF021DC5CAA004047C1 /* FortniTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DCCDF221DC5CAA004047C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DCCDFB21DC5CAA004047C1 /* FortniTrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92DCCDED21DC5CAA004047C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92DCCDD621DC5CA8004047C1 /* FortniTracker */;
+			targetProxy = 92DCCDEC21DC5CAA004047C1 /* PBXContainerItemProxy */;
+		};
+		92DCCDF821DC5CAA004047C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92DCCDD621DC5CA8004047C1 /* FortniTracker */;
+			targetProxy = 92DCCDF721DC5CAA004047C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92DCCDDE21DC5CA8004047C1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92DCCDDF21DC5CA8004047C1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92DCCDE321DC5CAA004047C1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92DCCDE421DC5CAA004047C1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92DCCDFD21DC5CAA004047C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92DCCDFE21DC5CAA004047C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92DCCE0021DC5CAA004047C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B40F504163AC2A6D065E0D24 /* Pods-FortniTracker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4BHXT8RHFR;
+				INFOPLIST_FILE = FortniTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShirouCo.FortniTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92DCCE0121DC5CAA004047C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FED6A6B538F4982ECCD889CC /* Pods-FortniTracker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4BHXT8RHFR;
+				INFOPLIST_FILE = FortniTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShirouCo.FortniTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92DCCE0321DC5CAA004047C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4BHXT8RHFR;
+				INFOPLIST_FILE = FortniTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShirouCo.FortniTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FortniTracker.app/FortniTracker";
+			};
+			name = Debug;
+		};
+		92DCCE0421DC5CAA004047C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4BHXT8RHFR;
+				INFOPLIST_FILE = FortniTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShirouCo.FortniTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FortniTracker.app/FortniTracker";
+			};
+			name = Release;
+		};
+		92DCCE0621DC5CAA004047C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4BHXT8RHFR;
+				INFOPLIST_FILE = FortniTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShirouCo.FortniTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FortniTracker;
+			};
+			name = Debug;
+		};
+		92DCCE0721DC5CAA004047C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4BHXT8RHFR;
+				INFOPLIST_FILE = FortniTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShirouCo.FortniTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FortniTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92DCCDD221DC5CA8004047C1 /* Build configuration list for PBXProject "FortniTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92DCCDFD21DC5CAA004047C1 /* Debug */,
+				92DCCDFE21DC5CAA004047C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92DCCDFF21DC5CAA004047C1 /* Build configuration list for PBXNativeTarget "FortniTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92DCCE0021DC5CAA004047C1 /* Debug */,
+				92DCCE0121DC5CAA004047C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92DCCE0221DC5CAA004047C1 /* Build configuration list for PBXNativeTarget "FortniTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92DCCE0321DC5CAA004047C1 /* Debug */,
+				92DCCE0421DC5CAA004047C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92DCCE0521DC5CAA004047C1 /* Build configuration list for PBXNativeTarget "FortniTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92DCCE0621DC5CAA004047C1 /* Debug */,
+				92DCCE0721DC5CAA004047C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92DCCDCF21DC5CA8004047C1 /* Project object */;
+}
