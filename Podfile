@@ -16,5 +16,9 @@ target 'FortniTracker' do
   pod 'Kingfisher'
   pod 'Moya-ObjectMapper/RxSwift'
   pod 'SwifterSwift'
+  pod 'Carte'
+  pod 'NSObject+Rx'
+  pod 'Toaster'
+  pod 'RxGesture'
   
 end

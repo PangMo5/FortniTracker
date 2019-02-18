@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		06961AB194D685DA261D74D7 /* Pods_FortniTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73156BD8D035F46AE10F2E3D /* Pods_FortniTracker.framework */; };
 		92DCCDDB21DC5CA8004047C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCCDDA21DC5CA8004047C1 /* AppDelegate.swift */; };
-		92DCCDDD21DC5CA8004047C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCCDDC21DC5CA8004047C1 /* ViewController.swift */; };
 		92DCCDE021DC5CA8004047C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DCCDDE21DC5CA8004047C1 /* Main.storyboard */; };
 		92DCCDE221DC5CAA004047C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92DCCDE121DC5CAA004047C1 /* Assets.xcassets */; };
 		92DCCDE521DC5CAA004047C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DCCDE321DC5CAA004047C1 /* LaunchScreen.storyboard */; };
@@ -28,6 +27,27 @@
 		92E0BB3E22166D8E00C7A058 /* DuoStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB3D22166D8E00C7A058 /* DuoStat.swift */; };
 		92E0BB4022166D9B00C7A058 /* SquadStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB3F22166D9B00C7A058 /* SquadStat.swift */; };
 		92E0BB4222166F5300C7A058 /* UserStatsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB4122166F5300C7A058 /* UserStatsData.swift */; };
+		92E0BB44221A418300C7A058 /* ItemAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB43221A418300C7A058 /* ItemAPI.swift */; };
+		92E0BB46221A429800C7A058 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB45221A429800C7A058 /* UserAPI.swift */; };
+		92E0BB4E221A745700C7A058 /* StoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB4D221A745700C7A058 /* StoreListViewController.swift */; };
+		92E0BB50221A749E00C7A058 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB4F221A749E00C7A058 /* BaseViewController.swift */; };
+		92E0BB52221A77A700C7A058 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB51221A77A700C7A058 /* StoreViewModel.swift */; };
+		92E0BB57221A79A300C7A058 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB56221A79A300C7A058 /* ViewModelType.swift */; };
+		92E0BB5B221A84D500C7A058 /* StoreCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB5A221A84D500C7A058 /* StoreCellViewModel.swift */; };
+		92E0BB5E221A912A00C7A058 /* StoreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB5D221A912A00C7A058 /* StoreSection.swift */; };
+		92E0BB60221A97B500C7A058 /* StoreItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB5F221A97B500C7A058 /* StoreItemCell.swift */; };
+		92E0BB65221A998000C7A058 /* ObelixProB-cyr.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0BB61221A997F00C7A058 /* ObelixProB-cyr.ttf */; };
+		92E0BB66221A998000C7A058 /* ObelixProIt-cyr.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0BB62221A998000C7A058 /* ObelixProIt-cyr.ttf */; };
+		92E0BB67221A998000C7A058 /* ObelixPro-cyr.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0BB63221A998000C7A058 /* ObelixPro-cyr.ttf */; };
+		92E0BB68221A998000C7A058 /* ObelixProBIt-cyr.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92E0BB64221A998000C7A058 /* ObelixProBIt-cyr.ttf */; };
+		92E0BB6B221A99CF00C7A058 /* Kingfisher+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB6A221A99CF00C7A058 /* Kingfisher+Rx.swift */; };
+		92E0BB6D221A9C2800C7A058 /* Moya+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB6C221A9C2800C7A058 /* Moya+Rx.swift */; };
+		92E0BB6F221A9E2200C7A058 /* UIApplication+FortniTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB6E221A9E2200C7A058 /* UIApplication+FortniTracker.swift */; };
+		92E0BB71221AA32200C7A058 /* StoreListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB70221AA32200C7A058 /* StoreListHeaderView.swift */; };
+		92E0BB73221AA61000C7A058 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB72221AA61000C7A058 /* BaseNavigationController.swift */; };
+		92E0BB75221AAB0200C7A058 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB74221AAB0200C7A058 /* ThemeManager.swift */; };
+		92E0BB77221AAEAE00C7A058 /* RxBinderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB76221AAEAE00C7A058 /* RxBinderExtensions.swift */; };
+		92E0BB79221AB54600C7A058 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0BB78221AB54600C7A058 /* BaseTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +71,6 @@
 		73156BD8D035F46AE10F2E3D /* Pods_FortniTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FortniTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DCCDD721DC5CA8004047C1 /* FortniTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortniTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DCCDDA21DC5CA8004047C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		92DCCDDC21DC5CA8004047C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		92DCCDDF21DC5CA8004047C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92DCCDE121DC5CAA004047C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92DCCDE421DC5CAA004047C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,6 +94,27 @@
 		92E0BB3D22166D8E00C7A058 /* DuoStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuoStat.swift; sourceTree = "<group>"; };
 		92E0BB3F22166D9B00C7A058 /* SquadStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadStat.swift; sourceTree = "<group>"; };
 		92E0BB4122166F5300C7A058 /* UserStatsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsData.swift; sourceTree = "<group>"; };
+		92E0BB43221A418300C7A058 /* ItemAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAPI.swift; sourceTree = "<group>"; };
+		92E0BB45221A429800C7A058 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		92E0BB4D221A745700C7A058 /* StoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewController.swift; sourceTree = "<group>"; };
+		92E0BB4F221A749E00C7A058 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		92E0BB51221A77A700C7A058 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
+		92E0BB56221A79A300C7A058 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		92E0BB5A221A84D500C7A058 /* StoreCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCellViewModel.swift; sourceTree = "<group>"; };
+		92E0BB5D221A912A00C7A058 /* StoreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSection.swift; sourceTree = "<group>"; };
+		92E0BB5F221A97B500C7A058 /* StoreItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemCell.swift; sourceTree = "<group>"; };
+		92E0BB61221A997F00C7A058 /* ObelixProB-cyr.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ObelixProB-cyr.ttf"; sourceTree = "<group>"; };
+		92E0BB62221A998000C7A058 /* ObelixProIt-cyr.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ObelixProIt-cyr.ttf"; sourceTree = "<group>"; };
+		92E0BB63221A998000C7A058 /* ObelixPro-cyr.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ObelixPro-cyr.ttf"; sourceTree = "<group>"; };
+		92E0BB64221A998000C7A058 /* ObelixProBIt-cyr.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ObelixProBIt-cyr.ttf"; sourceTree = "<group>"; };
+		92E0BB6A221A99CF00C7A058 /* Kingfisher+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Rx.swift"; sourceTree = "<group>"; };
+		92E0BB6C221A9C2800C7A058 /* Moya+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+Rx.swift"; sourceTree = "<group>"; };
+		92E0BB6E221A9E2200C7A058 /* UIApplication+FortniTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+FortniTracker.swift"; sourceTree = "<group>"; };
+		92E0BB70221AA32200C7A058 /* StoreListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListHeaderView.swift; sourceTree = "<group>"; };
+		92E0BB72221AA61000C7A058 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		92E0BB74221AAB0200C7A058 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		92E0BB76221AAEAE00C7A058 /* RxBinderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxBinderExtensions.swift; sourceTree = "<group>"; };
+		92E0BB78221AB54600C7A058 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		B40F504163AC2A6D065E0D24 /* Pods-FortniTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortniTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FortniTracker/Pods-FortniTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		FED6A6B538F4982ECCD889CC /* Pods-FortniTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortniTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-FortniTracker/Pods-FortniTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,13 +178,21 @@
 		92DCCDD921DC5CA8004047C1 /* FortniTracker */ = {
 			isa = PBXGroup;
 			children = (
+				92E0BB69221A99C200C7A058 /* Extensions */,
+				92E0BB5C221A911600C7A058 /* SectionModelType */,
+				92E0BB48221A4C0C00C7A058 /* Storyboards */,
 				92E0BB322216669C00C7A058 /* API */,
 				92E0BB212216619900C7A058 /* Models */,
 				92E0BB22221661A500C7A058 /* Views */,
 				92E0BB23221661AB00C7A058 /* ViewModels */,
+				CA28572EFCE189A621AE52D4 /* Types */,
+				92E0BB53221A78B800C7A058 /* Protocols */,
+				92E0BB49221A4C3B00C7A058 /* Fonts */,
+				92E0BB4F221A749E00C7A058 /* BaseViewController.swift */,
+				92E0BB72221AA61000C7A058 /* BaseNavigationController.swift */,
+				92E0BB78221AB54600C7A058 /* BaseTabBarController.swift */,
+				92E0BB74221AAB0200C7A058 /* ThemeManager.swift */,
 				92DCCDDA21DC5CA8004047C1 /* AppDelegate.swift */,
-				92DCCDDC21DC5CA8004047C1 /* ViewController.swift */,
-				92DCCDDE21DC5CA8004047C1 /* Main.storyboard */,
 				92DCCDE121DC5CAA004047C1 /* Assets.xcassets */,
 				92DCCDE321DC5CAA004047C1 /* LaunchScreen.storyboard */,
 				92DCCDE621DC5CAA004047C1 /* Info.plist */,
@@ -193,6 +241,9 @@
 		92E0BB22221661A500C7A058 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				92E0BB4A221A62DD00C7A058 /* Store */,
+				92E0BB4C221A62E600C7A058 /* Bookmarks */,
+				92E0BB4B221A62E200C7A058 /* Search */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +251,8 @@
 		92E0BB23221661AB00C7A058 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				92E0BB51221A77A700C7A058 /* StoreViewModel.swift */,
+				92E0BB5A221A84D500C7A058 /* StoreCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -207,8 +260,80 @@
 		92E0BB322216669C00C7A058 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				92E0BB43221A418300C7A058 /* ItemAPI.swift */,
+				92E0BB45221A429800C7A058 /* UserAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		92E0BB48221A4C0C00C7A058 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				92DCCDDE21DC5CA8004047C1 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		92E0BB49221A4C3B00C7A058 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				92E0BB63221A998000C7A058 /* ObelixPro-cyr.ttf */,
+				92E0BB61221A997F00C7A058 /* ObelixProB-cyr.ttf */,
+				92E0BB64221A998000C7A058 /* ObelixProBIt-cyr.ttf */,
+				92E0BB62221A998000C7A058 /* ObelixProIt-cyr.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		92E0BB4A221A62DD00C7A058 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				92E0BB4D221A745700C7A058 /* StoreListViewController.swift */,
+				92E0BB5F221A97B500C7A058 /* StoreItemCell.swift */,
+				92E0BB70221AA32200C7A058 /* StoreListHeaderView.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		92E0BB4B221A62E200C7A058 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		92E0BB4C221A62E600C7A058 /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bookmarks;
+			sourceTree = "<group>";
+		};
+		92E0BB53221A78B800C7A058 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				92E0BB56221A79A300C7A058 /* ViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		92E0BB5C221A911600C7A058 /* SectionModelType */ = {
+			isa = PBXGroup;
+			children = (
+				92E0BB5D221A912A00C7A058 /* StoreSection.swift */,
+			);
+			path = SectionModelType;
+			sourceTree = "<group>";
+		};
+		92E0BB69221A99C200C7A058 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92E0BB6A221A99CF00C7A058 /* Kingfisher+Rx.swift */,
+				92E0BB6C221A9C2800C7A058 /* Moya+Rx.swift */,
+				92E0BB6E221A9E2200C7A058 /* UIApplication+FortniTracker.swift */,
+				92E0BB76221AAEAE00C7A058 /* RxBinderExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B61751C0F6D8054590EF1A58 /* Pods */ = {
@@ -218,6 +343,13 @@
 				FED6A6B538F4982ECCD889CC /* Pods-FortniTracker.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CA28572EFCE189A621AE52D4 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,9 +458,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E0BB68221A998000C7A058 /* ObelixProBIt-cyr.ttf in Resources */,
 				92DCCDE521DC5CAA004047C1 /* LaunchScreen.storyboard in Resources */,
 				92DCCDE221DC5CAA004047C1 /* Assets.xcassets in Resources */,
 				92DCCDE021DC5CA8004047C1 /* Main.storyboard in Resources */,
+				92E0BB65221A998000C7A058 /* ObelixProB-cyr.ttf in Resources */,
+				92E0BB67221A998000C7A058 /* ObelixPro-cyr.ttf in Resources */,
+				92E0BB66221A998000C7A058 /* ObelixProIt-cyr.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,38 +493,46 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FortniTracker/Pods-FortniTracker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Carte/Carte.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTheme/RxTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Carte.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -420,21 +564,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E0BB6D221A9C2800C7A058 /* Moya+Rx.swift in Sources */,
 				92E0BB2F221661F900C7A058 /* Items.swift in Sources */,
+				92E0BB44221A418300C7A058 /* ItemAPI.swift in Sources */,
+				92E0BB77221AAEAE00C7A058 /* RxBinderExtensions.swift in Sources */,
 				92E0BB2E221661F900C7A058 /* Featured.swift in Sources */,
+				92E0BB5E221A912A00C7A058 /* StoreSection.swift in Sources */,
+				92E0BB60221A97B500C7A058 /* StoreItemCell.swift in Sources */,
 				92E0BB312216649800C7A058 /* User.swift in Sources */,
+				92E0BB46221A429800C7A058 /* UserAPI.swift in Sources */,
+				92E0BB73221AA61000C7A058 /* BaseNavigationController.swift in Sources */,
+				92E0BB52221A77A700C7A058 /* StoreViewModel.swift in Sources */,
+				92E0BB50221A749E00C7A058 /* BaseViewController.swift in Sources */,
+				92E0BB79221AB54600C7A058 /* BaseTabBarController.swift in Sources */,
 				92E0BB4022166D9B00C7A058 /* SquadStat.swift in Sources */,
 				92E0BB3E22166D8E00C7A058 /* DuoStat.swift in Sources */,
+				92E0BB4E221A745700C7A058 /* StoreListViewController.swift in Sources */,
+				92E0BB5B221A84D500C7A058 /* StoreCellViewModel.swift in Sources */,
 				92E0BB3C22166D7F00C7A058 /* SoloStat.swift in Sources */,
 				92E0BB4222166F5300C7A058 /* UserStatsData.swift in Sources */,
-				92DCCDDD21DC5CA8004047C1 /* ViewController.swift in Sources */,
 				92E0BB2B221661F900C7A058 /* Base.swift in Sources */,
 				92E0BB2A221661F900C7A058 /* Images.swift in Sources */,
 				92E0BB2C221661F900C7A058 /* Ratings.swift in Sources */,
+				92E0BB6F221A9E2200C7A058 /* UIApplication+FortniTracker.swift in Sources */,
 				92E0BB3822166B8200C7A058 /* UserStatsBase.swift in Sources */,
 				92E0BB2D221661F900C7A058 /* Item.swift in Sources */,
+				92E0BB71221AA32200C7A058 /* StoreListHeaderView.swift in Sources */,
 				92E0BB3422166A1F00C7A058 /* UserDataBase.swift in Sources */,
+				92E0BB6B221A99CF00C7A058 /* Kingfisher+Rx.swift in Sources */,
 				92DCCDDB21DC5CA8004047C1 /* AppDelegate.swift in Sources */,
+				92E0BB57221A79A300C7A058 /* ViewModelType.swift in Sources */,
+				92E0BB75221AAB0200C7A058 /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

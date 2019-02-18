@@ -16,12 +16,12 @@ import ObjectMapper
 
 struct Base: Mappable {
     var date_layout: String?
-    var lastupdate: Int?
+    var lastupdate: Date?
     var language: String?
     var date: String?
     var rows: Int?
     var vbucks: String?
-    var items: [Items]?
+    var items: [Item]?
     
     var error: Bool?
     var errorCode: String?
@@ -37,7 +37,7 @@ struct Base: Mappable {
 	mutating func mapping(map: Map) {
 
 		date_layout <- map["date_layout"]
-		lastupdate <- map["lastupdate"]
+		lastupdate <- (map["lastupdate"], DateTransform())
 		language <- map["language"]
 		date <- map["date"]
 		rows <- map["rows"]

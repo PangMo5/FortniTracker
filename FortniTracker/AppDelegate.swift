@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import SwifterSwift
+import Carte
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        themeService.rx
+            .bind({ $0.statusBarStyle }, to: UIApplication.shared.rx.statusBarStyle)
+            .disposed(by: rx.disposeBag)
         return true
     }
 

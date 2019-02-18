@@ -14,10 +14,10 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 import Foundation
 import ObjectMapper
 
-struct Images : Mappable {
-	var transparent : String?
-	var background : String?
-	var information : String?
+struct Image: Mappable {
+	var transparent : URL?
+	var background : URL?
+	var information : URL?
 	var featured : Featured?
 
 	init?(map: Map) {
@@ -26,9 +26,9 @@ struct Images : Mappable {
 
 	mutating func mapping(map: Map) {
 
-		transparent <- map["transparent"]
-		background <- map["background"]
-		information <- map["information"]
+		transparent <- (map["transparent"], URLTransform())
+		background <- (map["background"], URLTransform())
+		information <- (map["information"], URLTransform())
 		featured <- map["featured"]
 	}
 

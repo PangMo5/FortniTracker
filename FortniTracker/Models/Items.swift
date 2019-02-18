@@ -14,15 +14,15 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 import Foundation
 import ObjectMapper
 
-struct Items : Mappable {
+struct Item : Mappable {
 	var itemid : String?
 	var name : String?
 	var cost : String?
 	var featured : Int?
 	var refundable : Int?
-	var lastupdate : Int?
+	var lastupdate : Date?
 	var youtube : String?
-	var item : Item?
+	var itemDetail : ItemDetail?
 	var ratings : Ratings?
 
 	init?(map: Map) {
@@ -36,9 +36,9 @@ struct Items : Mappable {
 		cost <- map["cost"]
 		featured <- map["featured"]
 		refundable <- map["refundable"]
-		lastupdate <- map["lastupdate"]
+		lastupdate <- (map["lastupdate"], DateTransform())
 		youtube <- map["youtube"]
-		item <- map["item"]
+		itemDetail <- map["item"]
 		ratings <- map["ratings"]
 	}
 

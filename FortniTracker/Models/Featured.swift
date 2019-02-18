@@ -15,7 +15,7 @@ import Foundation
 import ObjectMapper
 
 struct Featured : Mappable {
-	var transparent : String?
+	var transparent : URL?
 
 	init?(map: Map) {
 
@@ -23,7 +23,7 @@ struct Featured : Mappable {
 
 	mutating func mapping(map: Map) {
 
-		transparent <- map["transparent"]
+		transparent <- (map["transparent"], URLTransform())
 	}
 
 }

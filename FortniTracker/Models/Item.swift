@@ -14,9 +14,9 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 import Foundation
 import ObjectMapper
 
-struct Item : Mappable {
-	var image : String?
-	var images : Images?
+struct ItemDetail : Mappable {
+	var image : URL?
+	var images : Image?
 	var captial : String?
 	var type : String?
 	var rarity : String?
@@ -28,7 +28,7 @@ struct Item : Mappable {
 
 	mutating func mapping(map: Map) {
 
-		image <- map["image"]
+		image <- (map["image"], URLTransform())
 		images <- map["images"]
 		captial <- map["captial"]
 		type <- map["type"]

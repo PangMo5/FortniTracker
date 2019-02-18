@@ -14,7 +14,7 @@ class UserStatsBase: Mappable {
     var score: Int?
     var playersoutlived: Int?
     var minutesplayed: Int?
-    var lastmodified: Int?
+    var lastmodified: Date?
     var kills: Int?
     var matchesplayed: Int?
     var placetop1: Int?
@@ -28,7 +28,7 @@ class UserStatsBase: Mappable {
         score                <- map["score"]
         playersoutlived      <- map["playersoutlived"]
         minutesplayed        <- map["minutesplayed"]
-        lastmodified         <- map["lastmodified"]
+        lastmodified         <- (map["lastmodified"], DateTransform())
         kills                <- map["kills"]
         matchesplayed        <- map["matchesplayed"]
         placetop1            <- map["placetop1"]

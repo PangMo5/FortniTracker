@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.1)
+  - Carte (2.1.6)
   - Differentiator (3.1.0)
   - Kingfisher (5.1.0)
   - Moya (12.0.1):
@@ -17,6 +18,8 @@ PODS:
   - Moya/RxSwift (12.0.1):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - "NSObject+Rx (4.4.1)":
+    - RxSwift (~> 4.3)
   - ObjectMapper (3.4.2)
   - Result (4.1.0)
   - RxAtomic (4.4.0)
@@ -26,6 +29,9 @@ PODS:
     - Differentiator (~> 3.0)
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
+  - RxGesture (2.1.0):
+    - RxCocoa (~> 4.4.0)
+    - RxSwift (~> 4.4.0)
   - RxOptional (3.6.2):
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
@@ -59,53 +65,66 @@ PODS:
   - SwifterSwift/SpriteKit (4.6.0)
   - SwifterSwift/SwiftStdlib (4.6.0)
   - SwifterSwift/UIKit (4.6.0)
+  - Toaster (2.1.1)
 
 DEPENDENCIES:
+  - Carte
   - Kingfisher
   - Moya-ObjectMapper/RxSwift
+  - "NSObject+Rx"
   - RxCocoa
   - RxDataSources
+  - RxGesture
   - RxOptional
   - RxSwift
   - RxSwiftExt
   - RxTheme
   - SwifterSwift
+  - Toaster
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Carte
     - Differentiator
     - Kingfisher
     - Moya
     - Moya-ObjectMapper
+    - "NSObject+Rx"
     - ObjectMapper
     - Result
     - RxAtomic
     - RxCocoa
     - RxDataSources
+    - RxGesture
     - RxOptional
     - RxSwift
     - RxSwiftExt
     - RxTheme
     - SwifterSwift
+    - Toaster
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Carte: c8200bfb59b77336aa2f02e84cc4ac0fa820034d
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Moya-ObjectMapper: c514b5eafcfd5e260f85f7a5bf66895a217e2b37
+  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxGesture: 7f6dfb45dbde06e618c24442d38493e3144f2c95
   RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
   RxTheme: b58ac61b7062d5a6215d53653a18c2f18f8015a0
   SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
+  Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
 
-PODFILE CHECKSUM: cc90c9d04ff055a7356ead5b09f2b5969e07c1c4
+PODFILE CHECKSUM: c31d5f530a117d7151d025e0870addc73cd05d61
 
 COCOAPODS: 1.5.2

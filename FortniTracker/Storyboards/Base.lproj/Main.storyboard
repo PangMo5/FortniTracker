@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZW1-IB-UM2">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ObelixPro-cyr.ttf">
+            <string>ObelixPro</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Base Tab Bar Controller-->
+        <scene sceneID="vRH-Ls-f26">
+            <objects>
+                <tabBarController hidesBottomBarWhenPushed="YES" id="ZW1-IB-UM2" customClass="BaseTabBarController" customModule="FortniTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BFk-Iq-y98">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9ga-jC-RjZ" kind="relationship" relationship="viewControllers" id="T6O-0f-9MN"/>
+                        <segue destination="R1u-2M-s6t" kind="relationship" relationship="viewControllers" id="fVa-ve-Qs7"/>
+                        <segue destination="qTy-dr-xYe" kind="relationship" relationship="viewControllers" id="nN1-l4-pT3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nx-BG-xsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="157"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Gxm-6c-Xup">
+            <objects>
+                <navigationController id="qTy-dr-xYe" customClass="BaseNavigationController" customModule="FortniTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" id="1fi-x2-2b0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Xj5-wq-IFW">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BS1-vX-9wJ" kind="relationship" relationship="rootViewController" id="WsA-yV-5Co"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PS1-lS-wp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2188" y="814"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Eak-sF-zwS">
+            <objects>
+                <viewController id="BS1-vX-9wJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CFi-jf-LNM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="asB-BE-lY1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="Nwv-gO-uMd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2yV-hd-4oi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2892" y="814"/>
+        </scene>
+        <!--Bookmarks-->
+        <scene sceneID="pd0-dX-SLf">
+            <objects>
+                <navigationController id="R1u-2M-s6t" customClass="BaseNavigationController" customModule="FortniTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bookmarks" id="4fd-RS-IVT"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dG8-5F-u3h">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f4p-h6-I9V" kind="relationship" relationship="rootViewController" id="0cb-Lq-Oup"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNU-4r-bc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2188" y="157"/>
+        </scene>
+        <!--Store-->
+        <scene sceneID="t0o-HX-1Ul">
+            <objects>
+                <navigationController id="9ga-jC-RjZ" customClass="BaseNavigationController" customModule="FortniTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Store" id="Sud-MJ-V5V"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="cnR-oa-0Sl">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1uA-lh-4XH" kind="relationship" relationship="rootViewController" id="Bzd-eX-i2K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yyC-mF-eWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2188" y="-499"/>
+        </scene>
+        <!--Bookmarks-->
+        <scene sceneID="mMf-zV-Vkl">
+            <objects>
+                <viewController id="f4p-h6-I9V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ugD-oY-7K1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eaY-zW-4Lz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bookmarks" id="z3X-cm-mls"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SJQ-HJ-h75" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2892" y="157"/>
+        </scene>
+        <!--Store-->
+        <scene sceneID="IFO-eU-F01">
+            <objects>
+                <viewController storyboardIdentifier="StoreListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1uA-lh-4XH" customClass="StoreListViewController" customModule="FortniTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tU3-aH-SXd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cpH-ZA-QfV">
+                                <rect key="frame" x="0.0" y="140" width="375" height="589"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="cMN-M1-rXG">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="50" height="40"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoreItemCell" id="5Rt-VD-gIa" customClass="StoreItemCell" customModule="FortniTracker" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="48" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9qF-5q-PDV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQE-fm-O0v">
+                                                    <rect key="frame" x="101.33333333333333" y="8" width="40.666666666666671" height="15"/>
+                                                    <fontDescription key="fontDescription" name="ObelixPro" family="ObelixPro" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="AQE-fm-O0v" firstAttribute="top" secondItem="5Rt-VD-gIa" secondAttribute="top" constant="8" id="7yQ-TC-SB4"/>
+                                            <constraint firstAttribute="bottom" secondItem="9qF-5q-PDV" secondAttribute="bottom" id="8pz-jt-Dms"/>
+                                            <constraint firstItem="9qF-5q-PDV" firstAttribute="leading" secondItem="5Rt-VD-gIa" secondAttribute="leading" id="AuO-Qr-10y"/>
+                                            <constraint firstItem="9qF-5q-PDV" firstAttribute="top" secondItem="5Rt-VD-gIa" secondAttribute="top" id="MjO-Do-D1R"/>
+                                            <constraint firstAttribute="trailing" secondItem="9qF-5q-PDV" secondAttribute="trailing" id="XaU-UO-nSc"/>
+                                            <constraint firstItem="AQE-fm-O0v" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Rt-VD-gIa" secondAttribute="leading" constant="8" id="Zd6-Sq-OAt"/>
+                                            <constraint firstAttribute="trailing" secondItem="AQE-fm-O0v" secondAttribute="trailing" constant="8" id="xrr-Qc-nsq"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="ratingLabel" destination="AQE-fm-O0v" id="GzT-qQ-eVs"/>
+                                            <outlet property="titleImageView" destination="9qF-5q-PDV" id="OSC-QK-2uA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="StoreListHeaderView" id="sao-dP-tf5" customClass="StoreListHeaderView" customModule="FortniTracker" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jY-hY-ohr">
+                                            <rect key="frame" x="16" y="12" width="343" height="20"/>
+                                            <fontDescription key="fontDescription" name="ObelixPro" family="ObelixPro" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="0jY-hY-ohr" firstAttribute="centerY" secondItem="sao-dP-tf5" secondAttribute="centerY" constant="2" id="6Fp-ii-9g5"/>
+                                        <constraint firstAttribute="trailing" secondItem="0jY-hY-ohr" secondAttribute="trailing" constant="16" id="Aep-wp-jmc"/>
+                                        <constraint firstItem="0jY-hY-ohr" firstAttribute="leading" secondItem="sao-dP-tf5" secondAttribute="leading" constant="16" id="u1B-2n-HKF"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="0jY-hY-ohr" id="fQc-1x-lwK"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cpH-ZA-QfV" firstAttribute="top" secondItem="ESg-gj-uX9" secondAttribute="top" id="QmV-FI-JlJ"/>
+                            <constraint firstItem="ESg-gj-uX9" firstAttribute="bottom" secondItem="cpH-ZA-QfV" secondAttribute="bottom" id="a2l-E5-vzN"/>
+                            <constraint firstItem="ESg-gj-uX9" firstAttribute="trailing" secondItem="cpH-ZA-QfV" secondAttribute="trailing" id="gOx-nC-TLV"/>
+                            <constraint firstItem="cpH-ZA-QfV" firstAttribute="leading" secondItem="ESg-gj-uX9" secondAttribute="leading" id="shy-oo-oiM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ESg-gj-uX9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Store" id="cZQ-97-Ba3"/>
+                    <connections>
+                        <outlet property="collectionView" destination="cpH-ZA-QfV" id="fLi-zh-UWg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63j-Ka-RHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2892" y="-500.24630541871926"/>
+        </scene>
+    </scenes>
+</document>
