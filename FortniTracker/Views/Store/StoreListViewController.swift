@@ -44,7 +44,7 @@ class StoreListViewController: BaseViewController {
         
         let dataSource = RxCollectionViewSectionedReloadDataSource<StoreSection>(configureCell: { dataSource, collectionView, indexPath, item -> UICollectionViewCell in
             
-            let cell = collectionView.dequeueReusableCell(withClass: StoreItemCell.self, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withClass: StoreItemCollectionViewCell.self, for: indexPath)
             
             switch item {
             case .daily(let viewModel):
@@ -59,7 +59,7 @@ class StoreListViewController: BaseViewController {
             let section = dataSource[indexPath.section]
             headerView.titleLabel.text = section.title
             themeService.rx
-                .bind({ $0.background }, to: headerView.rx.backgroundColor)
+                .bind({ $0.headerBackground }, to: headerView.rx.backgroundColor)
                 .bind({ $0.text }, to: headerView.titleLabel.rx.textColor)
                 .disposed(by: headerView.rx.disposeBag)
             return headerView

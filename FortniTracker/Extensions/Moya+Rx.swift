@@ -22,7 +22,7 @@ public extension PrimitiveSequence where TraitType == SingleTrait, ElementType =
                 if let reason = cdData.errorMessage {
                     Toast(text: reason, duration: Delay.long).show()
                 }
-                return Single.error(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : cdData.errorMessage ?? ""]))
+                return Single.just(try response.mapObject(type, context: context))
             } else {
                 return Single.just(try response.mapObject(type, context: context))
             }
@@ -36,7 +36,7 @@ public extension PrimitiveSequence where TraitType == SingleTrait, ElementType =
                 if let reason = cdData.errorMessage {
                     Toast(text: reason, duration: Delay.long).show()
                 }
-                return Single.error(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : cdData.errorMessage ?? ""]))
+                return Single.just(try response.mapArray(type, context: context))
             } else {
                 return Single.just(try response.mapArray(type, context: context))
             }
@@ -50,7 +50,7 @@ public extension PrimitiveSequence where TraitType == SingleTrait, ElementType =
                 if let reason = cdData.errorMessage {
                     Toast(text: reason, duration: Delay.long).show()
                 }
-                return Single.error(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : cdData.errorMessage ?? ""]))
+                return Single.just(try response.mapObject(type, atKeyPath: keyPath, context: context))
             } else {
                 return Single.just(try response.mapObject(type, atKeyPath: keyPath, context: context))
             }
@@ -64,7 +64,7 @@ public extension PrimitiveSequence where TraitType == SingleTrait, ElementType =
                 if let reason = cdData.errorMessage {
                     Toast(text: reason, duration: Delay.long).show()
                 }
-                return Single.error(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : cdData.errorMessage ?? ""]))
+                return Single.just(try response.mapArray(type, atKeyPath: keyPath, context: context))
             } else {
                 return Single.just(try response.mapArray(type, atKeyPath: keyPath, context: context))
             }

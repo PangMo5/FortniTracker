@@ -17,27 +17,30 @@ let themeService = ThemeType.service(initial: ThemeType.currentTheme())
 
 protocol Theme {
     var statusBarStyle: UIStatusBarStyle { get }
-    
+    var barStyle: UIBarStyle { get }
     var text: UIColor { get }
     var background: UIColor { get }
     var buttonText: UIColor { get }
+    var headerBackground: UIColor { get }
 }
 
 
 struct LightTheme: Theme {
     let statusBarStyle = UIStatusBarStyle.default
-    
+    let barStyle = UIBarStyle.default
     let text = UIColor.black
     let background = UIColor.white
-    let buttonText = UIColor.blue
+    let buttonText = UIColor(red: 90, green: 200, blue: 250)!
+    let headerBackground = UIColor.lightGray
 }
 
 struct DarkTheme: Theme {
     let statusBarStyle = UIStatusBarStyle.lightContent
-    
+    let barStyle = UIBarStyle.black
     let text = UIColor.white
     let background = UIColor.black
     let buttonText = UIColor.orange
+    let headerBackground = UIColor.darkGray
 }
 
 enum ThemeType: ThemeProvider {

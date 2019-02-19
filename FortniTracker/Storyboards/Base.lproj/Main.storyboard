@@ -18,7 +18,7 @@
         <!--Base Tab Bar Controller-->
         <scene sceneID="vRH-Ls-f26">
             <objects>
-                <tabBarController hidesBottomBarWhenPushed="YES" id="ZW1-IB-UM2" customClass="BaseTabBarController" customModule="FortniTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="ZW1-IB-UM2" customClass="BaseTabBarController" customModule="FortniTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BFk-Iq-y98">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -54,18 +54,81 @@
         <!--Search-->
         <scene sceneID="Eak-sF-zwS">
             <objects>
-                <viewController id="BS1-vX-9wJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BS1-vX-9wJ" customClass="SearchListViewController" customModule="FortniTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CFi-jf-LNM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lIU-GK-kG1">
+                                <rect key="frame" x="0.0" y="196" width="375" height="533"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchListTableViewCell" rowHeight="69" id="ahY-en-Rsl" customClass="SearchListTableViewCell" customModule="FortniTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="69"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ahY-en-Rsl" id="Ih7-Fs-9e1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="68.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6a-qF-B2H">
+                                                    <rect key="frame" x="16" y="8" width="343" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Tlq-YA-ovc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ObelixPro" family="ObelixPro" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2t-Gf-1dd">
+                                                    <rect key="frame" x="16" y="46" width="343" height="14.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="ObelixPro" family="ObelixPro" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="P2t-Gf-1dd" firstAttribute="top" secondItem="R6a-qF-B2H" secondAttribute="bottom" constant="8" id="0f9-BY-AZt"/>
+                                                <constraint firstItem="R6a-qF-B2H" firstAttribute="leading" secondItem="Ih7-Fs-9e1" secondAttribute="leading" constant="16" id="3Zy-1b-oc7"/>
+                                                <constraint firstAttribute="trailing" secondItem="R6a-qF-B2H" secondAttribute="trailing" constant="16" id="Apb-h8-lOP"/>
+                                                <constraint firstAttribute="bottom" secondItem="P2t-Gf-1dd" secondAttribute="bottom" constant="8" id="J1r-Lg-XR9"/>
+                                                <constraint firstItem="R6a-qF-B2H" firstAttribute="top" secondItem="Ih7-Fs-9e1" secondAttribute="top" constant="8" id="Tta-op-W4G"/>
+                                                <constraint firstAttribute="trailing" secondItem="P2t-Gf-1dd" secondAttribute="trailing" constant="16" id="YL2-X4-fEk"/>
+                                                <constraint firstItem="P2t-Gf-1dd" firstAttribute="leading" secondItem="Ih7-Fs-9e1" secondAttribute="leading" constant="16" id="Z4H-kC-wws"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="platformsLabel" destination="P2t-Gf-1dd" id="rbC-tv-xsW"/>
+                                            <outlet property="usernameLabel" destination="R6a-qF-B2H" id="0YN-sh-nfN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Username" translatesAutoresizingMaskIntoConstraints="NO" id="ttc-9d-lBH">
+                                <rect key="frame" x="0.0" y="140" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="asB-BE-lY1" firstAttribute="trailing" secondItem="lIU-GK-kG1" secondAttribute="trailing" id="7XT-hL-84i"/>
+                            <constraint firstItem="ttc-9d-lBH" firstAttribute="leading" secondItem="asB-BE-lY1" secondAttribute="leading" id="E0C-E8-YRS"/>
+                            <constraint firstItem="lIU-GK-kG1" firstAttribute="leading" secondItem="asB-BE-lY1" secondAttribute="leading" id="IgY-Mt-vO8"/>
+                            <constraint firstItem="asB-BE-lY1" firstAttribute="bottom" secondItem="lIU-GK-kG1" secondAttribute="bottom" id="JJ7-nd-ZeC"/>
+                            <constraint firstItem="ttc-9d-lBH" firstAttribute="trailing" secondItem="asB-BE-lY1" secondAttribute="trailing" id="ckv-cT-ypa"/>
+                            <constraint firstItem="ttc-9d-lBH" firstAttribute="top" secondItem="asB-BE-lY1" secondAttribute="top" id="nf0-Il-48e"/>
+                            <constraint firstItem="lIU-GK-kG1" firstAttribute="top" secondItem="ttc-9d-lBH" secondAttribute="bottom" id="pKG-Se-e0d"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="asB-BE-lY1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="Nwv-gO-uMd"/>
+                    <connections>
+                        <outlet property="searchBar" destination="ttc-9d-lBH" id="m63-YO-KvU"/>
+                        <outlet property="tableView" destination="lIU-GK-kG1" id="oeS-gz-0En"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yV-hd-4oi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2892" y="814"/>
+            <point key="canvasLocation" x="2892" y="813.54679802955673"/>
         </scene>
         <!--Bookmarks-->
         <scene sceneID="pd0-dX-SLf">
@@ -135,7 +198,7 @@
                                     <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoreItemCell" id="5Rt-VD-gIa" customClass="StoreItemCell" customModule="FortniTracker" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoreItemCollectionViewCell" id="5Rt-VD-gIa" customClass="StoreItemCollectionViewCell" customModule="FortniTracker" customModuleProvider="target">
                                         <rect key="frame" x="8" y="48" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

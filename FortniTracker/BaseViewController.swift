@@ -14,8 +14,11 @@ import RxSwiftExt
 import RxOptional
 import RxDataSources
 import NSObject_Rx
+import RxViewController
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, Navigatable {
+    
+    var navigator: Navigator!
     
     override func viewDidLoad() {
         super.viewDidLoad()

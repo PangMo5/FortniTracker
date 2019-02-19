@@ -19,14 +19,16 @@ class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.black, .font: UIFont(name: "ObelixPro", size: 34) ?? UIFont.systemFont(ofSize: 34)]
-        self.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black, .font: UIFont(name: "ObelixPro", size: 17) ?? UIFont.systemFont(ofSize: 17)]
+        UIBarButtonItem.appearance().setTitleTextAttributes([.font: UIFont(name: "ObelixPro", size: 17) ?? UIFont.systemFont(ofSize: 17)], for: .normal)
+        self.navigationBar.largeTitleTextAttributes = [.font: UIFont(name: "ObelixPro", size: 34) ?? UIFont.systemFont(ofSize: 34)]
+        self.navigationBar.titleTextAttributes = [.font: UIFont(name: "ObelixPro", size: 17) ?? UIFont.systemFont(ofSize: 17)]
         
         globalStatusBarStyle.subscribe(onNext: { [weak self] _ in
             self?.setNeedsStatusBarAppearanceUpdate()
         }).disposed(by: rx.disposeBag)
         
-        self.navigationBar.rx.tapGesture()
+        self.navigationBar.rx.tapGesture(configuration: { gesture, _ in gesture.numberOfTapsRequired = 2 })
+            .when(.recognized)
             .subscribe(onNext: { _ in
                 themeService.set(ThemeType.currentTheme().toggled())
             }).disposed(by: rx.disposeBag)

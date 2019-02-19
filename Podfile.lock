@@ -48,6 +48,9 @@ PODS:
   - RxTheme (2.2.2):
     - RxCocoa (~> 4.3)
     - RxSwift (~> 4.3)
+  - RxViewController (0.4.0):
+    - RxCocoa (>= 4.0.0)
+    - RxSwift (>= 4.0.0)
   - SwifterSwift (4.6.0):
     - SwifterSwift/AppKit (= 4.6.0)
     - SwifterSwift/CoreGraphics (= 4.6.0)
@@ -79,6 +82,7 @@ DEPENDENCIES:
   - RxSwift
   - RxSwiftExt
   - RxTheme
+  - RxViewController
   - SwifterSwift
   - Toaster
 
@@ -101,6 +105,7 @@ SPEC REPOS:
     - RxSwift
     - RxSwiftExt
     - RxTheme
+    - RxViewController
     - SwifterSwift
     - Toaster
 
@@ -122,9 +127,10 @@ SPEC CHECKSUMS:
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
   RxTheme: b58ac61b7062d5a6215d53653a18c2f18f8015a0
+  RxViewController: 359bbc2fda373a78605b2735afb0f9f4f3f6c3e4
   SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
 
-PODFILE CHECKSUM: c31d5f530a117d7151d025e0870addc73cd05d61
+PODFILE CHECKSUM: 37862168b7fc48d95850c8b846172d2a92242e02
 
 COCOAPODS: 1.5.2

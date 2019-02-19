@@ -14,8 +14,8 @@ enum StoreSection {
 }
 
 enum StoreSectionItem {
-    case daily(viewModel: StoreCellViewModel)
-    case upcoming(viewModel: StoreCellViewModel)
+    case daily(viewModel: ItemCellViewModel)
+    case upcoming(viewModel: ItemCellViewModel)
 }
 
 extension StoreSection: SectionModelType {
@@ -30,7 +30,7 @@ extension StoreSection: SectionModelType {
     
     var items: [StoreSectionItem] {
         switch self {
-        case .item(_, let items): return items.map { $0 }
+        case .item(_, let items): return items
         }
     }
     

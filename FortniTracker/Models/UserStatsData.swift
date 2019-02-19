@@ -24,8 +24,8 @@ extension UserStatsData: Mappable {
     }
 
     mutating func mapping(map: Map) {
-        defaultsolo          <- map["defaultsolo"]
-        defaultduo           <- map["defaultduo"]
-        defaultsquad         <- map["defaultsquad"]
+        defaultsolo          <- map["defaultsolo.default"]
+        defaultduo           <- map["defaultduo.default"]
+        defaultsquad         <- map["defaultsquad.default"]
     }
 }

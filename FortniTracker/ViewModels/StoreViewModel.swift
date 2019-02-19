@@ -13,11 +13,9 @@ import RxSwiftExt
 import Moya
 import Moya_ObjectMapper
 
-class StoreViewModel: ViewModelType {
+class StoreViewModel: NSObject, ViewModelType {
     
     let provider = MoyaProvider<ItemAPI>()
-    
-    let disposeBag = DisposeBag()
     
     struct Input {
         let refresh: Observable<Void>
@@ -39,28 +37,30 @@ class StoreViewModel: ViewModelType {
             return self.provider.rx
                 .request(.dailyStore)
                 .debug("dailyStore")
+                .processCheckForNetworkError(.popupForRetry)
                 .mapArrayForBase(Item.self, atKeyPath: "items")
                 .asObservable()
         }).subscribe(onNext: { items in
             dailyElements.accept(items)
-        }).disposed(by: disposeBag)
+        }).disposed(by: rx.disposeBag)
         
         input.refresh.flatMapLatest({ [weak self] () -> Observable<[Item]> in
             guard let self = self else { return Observable.just([]) }
             return self.provider.rx
                 .request(.upcomingItems)
                 .debug("upcomingItems")
+                .processCheckForNetworkError(.popupForRetry)
                 .mapArrayForBase(Item.self, atKeyPath: "items")
                 .asObservable()
         }).subscribe(onNext: { items in
             upcomingElements.accept(items)
-        }).disposed(by: disposeBag)
+        }).disposed(by: rx.disposeBag)
         
         Observable.combineLatest(dailyElements, upcomingElements).map { (daily, upcoming) -> [StoreSection] in
             var elements = [StoreSection]()
             
             let daily = daily.map({ daily -> StoreSectionItem in
-                let cellViewModel = StoreCellViewModel(with: daily)
+                let cellViewModel = ItemCellViewModel(with: daily)
                 return StoreSectionItem.daily(viewModel: cellViewModel)
             })
             if daily.isNotEmpty {
@@ -68,7 +68,7 @@ class StoreViewModel: ViewModelType {
             }
             
             let upcoming = upcoming.map({ upcoming -> StoreSectionItem in
-                let cellViewModel = StoreCellViewModel(with: upcoming)
+                let cellViewModel = ItemCellViewModel(with: upcoming)
                 return StoreSectionItem.upcoming(viewModel: cellViewModel)
             })
             if upcoming.isNotEmpty {
@@ -76,16 +76,8 @@ class StoreViewModel: ViewModelType {
             }
             
             return elements
-        }.bind(to: elements).disposed(by: disposeBag)
+        }.bind(to: elements).disposed(by: rx.disposeBag)
         
         return Output(items: elements)
-    }
-    
-    func request() -> Observable<[StoreCellViewModel]> {
-        return provider.rx
-            .request(.dailyStore)
-            .mapArray(Item.self)
-            .asObservable()
-            .map { $0.map { StoreCellViewModel(with: $0) } }
     }
 }

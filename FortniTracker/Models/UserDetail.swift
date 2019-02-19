@@ -1,5 +1,5 @@
 //
-//  UserDataBase.swift
+//  UserDetail.swift
 //  FortniTracker
 //
 //  Created by Shirou on 15/02/2019.
@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct UserDataBase {
+struct UserDetail {
     
     var accountId: String?
     var seasonWindow: String?
@@ -18,7 +18,7 @@ struct UserDataBase {
 }
 
 
-extension UserDataBase: Mappable {
+extension UserDetail: Mappable {
 
     init?(map: Map) {
 
@@ -28,5 +28,6 @@ extension UserDataBase: Mappable {
         accountId            <- map["accountId"]
         seasonWindow         <- map["seasonWindow"]
         data                 <- map["data.keyboardmouse"]
+        overallData          <- map["overallData.defaultModes"]
     }
 }

@@ -1,5 +1,5 @@
 //
-//  StoreCellViewModel.swift
+//  ItemCellViewModel.swift
 //  FortniTracker
 //
 //  Created by Shirou on 18/02/2019.
@@ -9,7 +9,7 @@
 import RxSwift
 import RxCocoa
 
-class StoreCellViewModel {
+class ItemCellViewModel {
     
     let rating: Driver<String?>
     let imageURL: Driver<URL?>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ObelixPro-cyr.ttf">
+            <string>ObelixPro</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--User Detail View Controller-->
+        <scene sceneID="zIW-x1-jVX">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5B8-hr-Rqd" customClass="UserDetailViewController" customModule="FortniTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EcY-d5-XPr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oFL-zG-gwy">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserDetailHeaderTableViewCell" rowHeight="48" id="eGv-fc-yIx" customClass="UserDetailTableViewCell" customModule="FortniTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eGv-fc-yIx" id="dUu-ax-Clg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="47.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNw-dZ-p3U">
+                                                    <rect key="frame" x="15.999999999999996" y="8.0000000000000018" width="47.666666666666657" height="31.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="ObelixPro" family="ObelixPro" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bR-Pm-lRN">
+                                                    <rect key="frame" x="239.33333333333334" y="8.0000000000000018" width="119.66666666666666" height="31.666666666666671"/>
+                                                    <string key="text">mathesplayed: 0
+minytesplayed: 0</string>
+                                                    <fontDescription key="fontDescription" name="ObelixPro" family="ObelixPro" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lA-Sa-Mjm">
+                                                    <rect key="frame" x="0.0" y="46.666666666666664" width="375" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="fZd-LS-3k1"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOB-V0-UWh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="9Ys-dc-2ve"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4bR-Pm-lRN" secondAttribute="trailing" constant="16" id="6SX-1Z-sll"/>
+                                                <constraint firstItem="UOB-V0-UWh" firstAttribute="leading" secondItem="dUu-ax-Clg" secondAttribute="leading" id="9Sh-UF-6hm"/>
+                                                <constraint firstAttribute="trailing" secondItem="UOB-V0-UWh" secondAttribute="trailing" id="9zg-PV-tfx"/>
+                                                <constraint firstAttribute="trailing" secondItem="5lA-Sa-Mjm" secondAttribute="trailing" id="GWU-gt-odo"/>
+                                                <constraint firstItem="NNw-dZ-p3U" firstAttribute="top" secondItem="dUu-ax-Clg" secondAttribute="top" constant="8" id="JQd-ea-QOR"/>
+                                                <constraint firstItem="NNw-dZ-p3U" firstAttribute="leading" secondItem="dUu-ax-Clg" secondAttribute="leading" constant="16" id="NQ2-cz-xVf"/>
+                                                <constraint firstAttribute="bottom" secondItem="4bR-Pm-lRN" secondAttribute="bottom" constant="8" id="NcT-F1-MlG"/>
+                                                <constraint firstAttribute="bottom" secondItem="NNw-dZ-p3U" secondAttribute="bottom" constant="8" id="PSd-Bm-ba6"/>
+                                                <constraint firstAttribute="bottom" secondItem="5lA-Sa-Mjm" secondAttribute="bottom" id="e3g-mA-BMf"/>
+                                                <constraint firstItem="UOB-V0-UWh" firstAttribute="top" secondItem="dUu-ax-Clg" secondAttribute="top" id="hfl-gh-qgg"/>
+                                                <constraint firstItem="5lA-Sa-Mjm" firstAttribute="leading" secondItem="dUu-ax-Clg" secondAttribute="leading" id="ppZ-ss-VXZ"/>
+                                                <constraint firstItem="4bR-Pm-lRN" firstAttribute="top" secondItem="dUu-ax-Clg" secondAttribute="top" constant="8" id="rjJ-7L-gZR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTitleLabel" destination="4bR-Pm-lRN" id="ijG-bA-KyL"/>
+                                            <outlet property="titleLabel" destination="NNw-dZ-p3U" id="cjQ-8a-C1g"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserDetailTableViewCell" rowHeight="60" id="9jr-GD-7TN" customClass="UserDetailTableViewCell" customModule="FortniTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="76" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9jr-GD-7TN" id="q5U-H7-zwP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJs-tN-wqa">
+                                                    <rect key="frame" x="15.999999999999996" y="16" width="44.666666666666657" height="27.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="ObelixPro" family="ObelixPro" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqM-eS-ZK9">
+                                                    <rect key="frame" x="349.66666666666669" y="8" width="9.3333333333333144" height="43.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="ObelixPro" family="ObelixPro" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uJs-tN-wqa" firstAttribute="top" secondItem="q5U-H7-zwP" secondAttribute="top" constant="16" id="PmD-k3-ijd"/>
+                                                <constraint firstItem="uJs-tN-wqa" firstAttribute="leading" secondItem="q5U-H7-zwP" secondAttribute="leading" constant="16" id="VwY-Yc-u49"/>
+                                                <constraint firstItem="KqM-eS-ZK9" firstAttribute="top" secondItem="q5U-H7-zwP" secondAttribute="top" constant="8" id="biM-Yq-IrY"/>
+                                                <constraint firstAttribute="bottom" secondItem="KqM-eS-ZK9" secondAttribute="bottom" constant="8" id="hTh-ER-Arx"/>
+                                                <constraint firstAttribute="trailing" secondItem="KqM-eS-ZK9" secondAttribute="trailing" constant="16" id="o18-we-oh5"/>
+                                                <constraint firstAttribute="bottom" secondItem="uJs-tN-wqa" secondAttribute="bottom" constant="16" id="o2P-DP-2Hl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailTitleLabel" destination="KqM-eS-ZK9" id="hei-Bj-D27"/>
+                                            <outlet property="titleLabel" destination="uJs-tN-wqa" id="vAl-hJ-lV4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="oFL-zG-gwy" secondAttribute="bottom" id="9VT-L0-Pr9"/>
+                            <constraint firstItem="oFL-zG-gwy" firstAttribute="top" secondItem="5uK-TS-4yd" secondAttribute="top" id="Jgk-kg-SDs"/>
+                            <constraint firstItem="oFL-zG-gwy" firstAttribute="leading" secondItem="5uK-TS-4yd" secondAttribute="leading" id="bHx-68-lSu"/>
+                            <constraint firstItem="5uK-TS-4yd" firstAttribute="trailing" secondItem="oFL-zG-gwy" secondAttribute="trailing" id="pzt-vq-ic3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5uK-TS-4yd"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="oFL-zG-gwy" id="P4O-5b-yBu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lId-Nu-0GD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="115.27093596059113"/>
+        </scene>
+    </scenes>
+</document>

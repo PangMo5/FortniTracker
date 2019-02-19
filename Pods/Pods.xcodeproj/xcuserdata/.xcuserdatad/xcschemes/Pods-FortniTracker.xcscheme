@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4E2B71B6A4CDEBC677E7E9C7600BA91"
+               BlueprintIdentifier = "FAD55614A12964156B1B9EED5A509AF0"
                BlueprintName = "Pods-FortniTracker"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Pods-FortniTracker.framework">

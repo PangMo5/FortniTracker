@@ -20,5 +20,6 @@ target 'FortniTracker' do
   pod 'NSObject+Rx'
   pod 'Toaster'
   pod 'RxGesture'
+  pod 'RxViewController'
   
 end
