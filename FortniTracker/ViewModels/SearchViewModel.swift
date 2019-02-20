@@ -21,11 +21,12 @@ class SearchViewModel: NSObject, ViewModelType {
     struct Input {
         let inputText: Driver<String>
         let selection: Driver<SearchSectionItem>
+        let tapGesture: Observable<Void>
     }
     
     struct Output {
         let items: BehaviorRelay<[SearchSection]>
-        let dismissKeyboard: Driver<Void>
+        let dismissKeyboard: Observable<Void>
         let userSelected: Driver<UserDetailViewModel>
     }
     
@@ -35,7 +36,7 @@ class SearchViewModel: NSObject, ViewModelType {
         
         let userSelected = PublishSubject<User>()
         
-        let dismissKeyboard = input.selection.mapToVoid()
+        let dismissKeyboard = Observable.of(input.selection.mapToVoid().asObservable(), input.tapGesture).merge()
         
         let inputText = BehaviorRelay(value: "")
         input.inputText.skip(1).debounce(0.5).distinctUntilChanged().asObservable()

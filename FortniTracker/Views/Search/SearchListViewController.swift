@@ -11,6 +11,7 @@ import RxSwift
 import RxDataSources
 import SwifterSwift
 import RxSwiftExt
+import RxGesture
 
 class SearchListViewController: BaseViewController {
     
@@ -45,7 +46,8 @@ class SearchListViewController: BaseViewController {
         super.bindViewModel()
         
         let input = SearchViewModel.Input(inputText: searchBar.rx.text.filterNil().asDriver(onErrorJustReturn: ""),
-                                          selection: tableView.rx.modelSelected(SearchSectionItem.self).asDriver())
+                                          selection: tableView.rx.modelSelected(SearchSectionItem.self).asDriver(),
+                                          tapGesture: tableView.rx.didScroll.asObservable())
         
         let output = viewModel.transform(input: input)
         
@@ -65,11 +67,11 @@ class SearchListViewController: BaseViewController {
             .disposed(by: rx.disposeBag)
         
         output.userSelected.drive(onNext: { [weak self] viewModel in
+            self?.tableView.indexPathsForVisibleRows?.forEach { self?.tableView.deselectRow(at: $0, animated: true) }
             self?.show(segue: .userDetail(viewModel: viewModel))
         }).disposed(by: rx.disposeBag)
         
-        output.dismissKeyboard.drive(onNext: { [weak self] _ in
-            self?.tableView.indexPathsForVisibleRows?.forEach { self?.tableView.deselectRow(at: $0, animated: true) }
+        output.dismissKeyboard.subscribe(onNext: { [weak self] _ in
             self?.searchBar.resignFirstResponder()
         }).disposed(by: rx.disposeBag)
     }
