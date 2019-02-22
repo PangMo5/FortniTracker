@@ -78,12 +78,18 @@
                                                     <fontDescription key="fontDescription" name="ObelixPro" family="ObelixPro" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2t-Gf-1dd">
                                                     <rect key="frame" x="16" y="46" width="343" height="14.666666666666664"/>
                                                     <fontDescription key="fontDescription" name="ObelixPro" family="ObelixPro" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -95,7 +101,13 @@
                                                 <constraint firstAttribute="trailing" secondItem="P2t-Gf-1dd" secondAttribute="trailing" constant="16" id="YL2-X4-fEk"/>
                                                 <constraint firstItem="P2t-Gf-1dd" firstAttribute="leading" secondItem="Ih7-Fs-9e1" secondAttribute="leading" constant="16" id="Z4H-kC-wws"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="platformsLabel" destination="P2t-Gf-1dd" id="rbC-tv-xsW"/>
                                             <outlet property="usernameLabel" destination="R6a-qF-B2H" id="0YN-sh-nfN"/>
@@ -189,7 +201,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cpH-ZA-QfV">
-                                <rect key="frame" x="0.0" y="140" width="375" height="589"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="cMN-M1-rXG">
                                     <size key="itemSize" width="150" height="150"/>
@@ -256,8 +268,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cpH-ZA-QfV" firstAttribute="top" secondItem="ESg-gj-uX9" secondAttribute="top" id="QmV-FI-JlJ"/>
-                            <constraint firstItem="ESg-gj-uX9" firstAttribute="bottom" secondItem="cpH-ZA-QfV" secondAttribute="bottom" id="a2l-E5-vzN"/>
+                            <constraint firstItem="cpH-ZA-QfV" firstAttribute="top" secondItem="tU3-aH-SXd" secondAttribute="top" id="QmV-FI-JlJ"/>
+                            <constraint firstAttribute="bottom" secondItem="cpH-ZA-QfV" secondAttribute="bottom" id="a2l-E5-vzN"/>
                             <constraint firstItem="ESg-gj-uX9" firstAttribute="trailing" secondItem="cpH-ZA-QfV" secondAttribute="trailing" id="gOx-nC-TLV"/>
                             <constraint firstItem="cpH-ZA-QfV" firstAttribute="leading" secondItem="ESg-gj-uX9" secondAttribute="leading" id="shy-oo-oiM"/>
                         </constraints>

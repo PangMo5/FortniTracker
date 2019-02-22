@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxTheme
+import SkeletonView
 
 let globalStatusBarStyle = BehaviorRelay<UIStatusBarStyle>(value: .default)
 
@@ -22,6 +23,7 @@ protocol Theme {
     var background: UIColor { get }
     var buttonText: UIColor { get }
     var headerBackground: UIColor { get }
+    var skeletonGradient: SkeletonGradient { get }
 }
 
 
@@ -32,6 +34,7 @@ struct LightTheme: Theme {
     let background = UIColor.white
     let buttonText = UIColor(red: 90, green: 200, blue: 250)!
     let headerBackground = UIColor.lightGray
+    let skeletonGradient = SkeletonGradient(baseColor: UIColor.clouds)
 }
 
 struct DarkTheme: Theme {
@@ -41,6 +44,7 @@ struct DarkTheme: Theme {
     let background = UIColor.black
     let buttonText = UIColor.orange
     let headerBackground = UIColor.darkGray
+    let skeletonGradient = SkeletonGradient(baseColor: UIColor.midnightBlue)
 }
 
 enum ThemeType: ThemeProvider {

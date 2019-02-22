@@ -157,12 +157,14 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxSkeleton/RxSkeleton.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxTheme/RxTheme.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
@@ -179,12 +181,14 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxSkeleton/RxSkeleton.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxTheme/RxTheme.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

@@ -30,7 +30,7 @@ class BaseNavigationController: UINavigationController {
         self.navigationBar.rx.tapGesture(configuration: { gesture, _ in gesture.numberOfTapsRequired = 2 })
             .when(.recognized)
             .subscribe(onNext: { _ in
-                themeService.set(ThemeType.currentTheme().toggled())
+                themeService.switch(ThemeType.currentTheme().toggled())
             }).disposed(by: rx.disposeBag)
         
         themeService.rx

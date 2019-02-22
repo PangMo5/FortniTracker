@@ -11,6 +11,7 @@ import RxSwift
 import RxDataSources
 import SwifterSwift
 import RxSwiftExt
+import RxSkeleton
 
 class StoreListViewController: BaseViewController {
     
@@ -23,6 +24,10 @@ class StoreListViewController: BaseViewController {
     }
     
     override func makeUI() {
+        super.makeUI()
+        
+        view.isSkeletonable = true
+        collectionView.isSkeletonable = true
         collectionView.refreshControl = UIRefreshControl()
         
         themeService.rx
@@ -34,15 +39,31 @@ class StoreListViewController: BaseViewController {
     override func bindViewModel() {
         super.bindViewModel()
         
-        let refresh = Observable.of(Observable.just(()), collectionView.refreshControl!.rx.controlEvent(.valueChanged).asObservable()).merge()
+        collectionView.delegate = nil
+        collectionView.rx.setDelegate(self).disposed(by: rx.disposeBag)
+        
+        let refresh = Observable.of(Observable.just(()), collectionView.refreshControl!.rx.controlEvent(.valueChanged).asObservable()).merge().debug("refresh")
         
         let input = StoreViewModel.Input(refresh: refresh)
         
         let output = viewModel.transform(input: input)
         
-        output.items.asObservable().map { _ in false }.bind(to: collectionView.refreshControl!.rx.isRefreshing).disposed(by: rx.disposeBag)
+        let items = output.items.share()
         
-        let dataSource = RxCollectionViewSectionedReloadDataSource<StoreSection>(configureCell: { dataSource, collectionView, indexPath, item -> UICollectionViewCell in
+        items
+            .bind(to: collectionView.rx.items(dataSource: storeSectionDataSource()))
+            .disposed(by: rx.disposeBag)
+        
+        items.mapTo(false).debug("refreshControl").bind(to: collectionView.refreshControl!.rx.isRefreshing).disposed(by: rx.disposeBag)
+        
+        Observable.just(true).bind(to: view.rx.isSkeletoning(showAnimation: .topLeftBottomRight, collectionView: collectionView)).disposed(by: rx.disposeBag)
+        items.mapTo(false).bind(to: view.rx.isSkeletoning(showAnimation: .topLeftBottomRight, collectionView: collectionView)).disposed(by: rx.disposeBag)
+        //items.mapTo(false).bind(to: view.rx.isSkeletoning(showAnimation: .topLeftBottomRight)).disposed(by: rx.disposeBag)
+        
+    }
+    
+    func storeSectionDataSource() -> RxCollectionViewSkeletonedReloadDataSource<StoreSection> {
+        return RxCollectionViewSkeletonedReloadDataSource(configureCell: { dataSource, collectionView, indexPath, item -> UICollectionViewCell in
             
             let cell = collectionView.dequeueReusableCell(withClass: StoreItemCollectionViewCell.self, for: indexPath)
             
@@ -63,13 +84,9 @@ class StoreListViewController: BaseViewController {
                 .bind({ $0.text }, to: headerView.titleLabel.rx.textColor)
                 .disposed(by: headerView.rx.disposeBag)
             return headerView
+        }, reuseIdentifierForItemAtIndexPath: { _, _, _ in
+            return String(describing: StoreItemCollectionViewCell.self)
         })
-        
-        output.items.asObservable()
-            .bind(to: collectionView.rx.items(dataSource: dataSource))
-            .disposed(by: rx.disposeBag)
-        
-        collectionView.rx.setDelegate(self).disposed(by: rx.disposeBag)
     }
 }
 

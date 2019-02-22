@@ -18,8 +18,9 @@ target 'FortniTracker' do
   pod 'SwifterSwift'
   pod 'Carte'
   pod 'NSObject+Rx'
-  pod 'Toaster'
   pod 'RxGesture'
   pod 'RxViewController'
+  pod 'RxSkeleton'
+  pod 'Toast-Swift'
   
 end

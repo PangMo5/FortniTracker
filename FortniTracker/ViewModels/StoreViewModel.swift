@@ -32,26 +32,28 @@ class StoreViewModel: NSObject, ViewModelType {
         let dailyElements = BehaviorRelay<[Item]>(value: [])
         let upcomingElements = BehaviorRelay<[Item]>(value: [])
         
-        input.refresh.flatMapLatest({ [weak self] () -> Observable<[Item]> in
+        input.refresh.debug("dailyStore").flatMapLatest({ [weak self] () -> Observable<[Item]> in
             guard let self = self else { return Observable.just([]) }
             return self.provider.rx
                 .request(.dailyStore)
-                .debug("dailyStore")
+                .debug("dailyStore.Network")
                 .processCheckForNetworkError(.popupForRetry)
                 .mapArrayForBase(Item.self, atKeyPath: "items")
                 .asObservable()
+                .catchErrorJustReturn([])
         }).subscribe(onNext: { items in
             dailyElements.accept(items)
         }).disposed(by: rx.disposeBag)
         
-        input.refresh.flatMapLatest({ [weak self] () -> Observable<[Item]> in
+        input.refresh.debug("upcomingItems").flatMapLatest({ [weak self] _ -> Observable<[Item]> in
             guard let self = self else { return Observable.just([]) }
             return self.provider.rx
                 .request(.upcomingItems)
-                .debug("upcomingItems")
+                .debug("upcomingItems.Network")
                 .processCheckForNetworkError(.popupForRetry)
                 .mapArrayForBase(Item.self, atKeyPath: "items")
                 .asObservable()
+                .catchErrorJustReturn([])
         }).subscribe(onNext: { items in
             upcomingElements.accept(items)
         }).disposed(by: rx.disposeBag)

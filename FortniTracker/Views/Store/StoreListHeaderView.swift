@@ -11,4 +11,10 @@ import UIKit
 class StoreListHeaderView: UICollectionReusableView {
     
     @IBOutlet weak var titleLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.isSkeletonable = true
+    }
 }

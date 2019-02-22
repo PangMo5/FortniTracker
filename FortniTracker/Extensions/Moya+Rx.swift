@@ -11,7 +11,7 @@ import RxSwift
 import Moya
 import ObjectMapper
 import RxSwiftExt
-import Toaster
+import Toast_Swift
 
 public extension PrimitiveSequence where TraitType == SingleTrait, ElementType == Response {
     
@@ -20,9 +20,9 @@ public extension PrimitiveSequence where TraitType == SingleTrait, ElementType =
             let cdData = try response.mapObject(Base.self)
             if cdData.error ?? false {
                 if let reason = cdData.errorMessage {
-                    Toast(text: reason, duration: Delay.long).show()
+                    UIApplication.getTopMostViewController()?.view.makeToast(reason)
                 }
-                return Single.just(try response.mapObject(type, context: context))
+                return Single.error(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : cdData.errorMessage ?? ""]))
             } else {
                 return Single.just(try response.mapObject(type, context: context))
             }
@@ -33,10 +33,9 @@ public extension PrimitiveSequence where TraitType == SingleTrait, ElementType =
         return flatMap { response -> Single<[T]> in
             let cdData = try response.mapObject(Base.self)
             if cdData.error ?? false {
-                if let reason = cdData.errorMessage {
-                    Toast(text: reason, duration: Delay.long).show()
+                if let reason = cdData.errorMessage {UIApplication.getTopMostViewController()?.view.makeToast(reason)
                 }
-                return Single.just(try response.mapArray(type, context: context))
+                return Single.error(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : cdData.errorMessage ?? ""]))
             } else {
                 return Single.just(try response.mapArray(type, context: context))
             }
@@ -48,9 +47,9 @@ public extension PrimitiveSequence where TraitType == SingleTrait, ElementType =
             let cdData = try response.mapObject(Base.self)
             if cdData.error ?? false {
                 if let reason = cdData.errorMessage {
-                    Toast(text: reason, duration: Delay.long).show()
+                    UIApplication.getTopMostViewController()?.view.makeToast(reason)
                 }
-                return Single.just(try response.mapObject(type, atKeyPath: keyPath, context: context))
+                return Single.error(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : cdData.errorMessage ?? ""]))
             } else {
                 return Single.just(try response.mapObject(type, atKeyPath: keyPath, context: context))
             }
@@ -62,9 +61,9 @@ public extension PrimitiveSequence where TraitType == SingleTrait, ElementType =
             let cdData = try response.mapObject(Base.self)
             if cdData.error ?? false {
                 if let reason = cdData.errorMessage {
-                    Toast(text: reason, duration: Delay.long).show()
+                    UIApplication.getTopMostViewController()?.view.makeToast(reason)
                 }
-                return Single.just(try response.mapArray(type, atKeyPath: keyPath, context: context))
+                return Single.error(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : cdData.errorMessage ?? ""]))
             } else {
                 return Single.just(try response.mapArray(type, atKeyPath: keyPath, context: context))
             }
@@ -87,25 +86,25 @@ public extension PrimitiveSequence where TraitType == SingleTrait, ElementType =
             } catch {
                 switch type {
                 case .popup:
-                    Toast(text: error.localizedDescription, duration: Delay.long).show()
+                    UIApplication.getTopMostViewController()?.view.makeToast(error.localizedDescription)
                 case .toast:
-                    Toast(text: error.localizedDescription, duration: Delay.long).show()
+                    UIApplication.getTopMostViewController()?.view.makeToast(error.localizedDescription)
                 default:
                     break
                 }
                 return Single.error(error)
             }
-            }.retryWhen({ e -> Observable<Int> in
-                return e.enumerated().flatMap({ (index, error) -> Observable<Int> in
+            }.retryWhen({ e -> Observable<Void> in
+                return e.flatMap({ error -> Observable<Void> in
                     if type != .popupForRetry {
                         return Observable.error(error)
                     } else {
-                        return Observable<Int>.create { observer in
+                        return Observable<Void>.create { observer in
                             UIApplication.getTopMostViewController()?.showAlert(title: "Networking Error", message: error.localizedDescription, buttonTitles: ["cancel", "retry"], highlightedButtonIndex: 1, completion: { index in
                                 if index == 0 {
                                     return observer.onError(error)
                                 } else {
-                                    return observer.onNext(1)
+                                    return observer.onNext(())
                                 }
                             })
                             return Disposables.create()

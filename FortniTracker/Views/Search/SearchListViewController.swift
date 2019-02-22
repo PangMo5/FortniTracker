@@ -47,7 +47,7 @@ class SearchListViewController: BaseViewController {
         
         let input = SearchViewModel.Input(inputText: searchBar.rx.text.filterNil().asDriver(onErrorJustReturn: ""),
                                           selection: tableView.rx.modelSelected(SearchSectionItem.self).asDriver(),
-                                          tapGesture: tableView.rx.didScroll.asObservable())
+                                          dismissGesture: tableView.rx.didScroll.asObservable())
         
         let output = viewModel.transform(input: input)
         

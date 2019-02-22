@@ -2,7 +2,7 @@ PODS:
   - Alamofire (4.8.1)
   - Carte (2.1.6)
   - Differentiator (3.1.0)
-  - Kingfisher (5.1.0)
+  - Kingfisher (5.1.1)
   - Moya (12.0.1):
     - Moya/Core (= 12.0.1)
   - Moya-ObjectMapper/Core (2.8):
@@ -22,8 +22,8 @@ PODS:
     - RxSwift (~> 4.3)
   - ObjectMapper (3.4.2)
   - Result (4.1.0)
-  - RxAtomic (4.4.0)
-  - RxCocoa (4.4.0):
+  - RxAtomic (4.4.1)
+  - RxCocoa (4.4.1):
     - RxSwift (~> 4.0)
   - RxDataSources (3.1.0):
     - Differentiator (~> 3.0)
@@ -35,7 +35,12 @@ PODS:
   - RxOptional (3.6.2):
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
-  - RxSwift (4.4.0):
+  - RxSkeleton (0.0.9):
+    - RxCocoa
+    - RxDataSources
+    - RxSwift
+    - SkeletonView
+  - RxSwift (4.4.1):
     - RxAtomic (~> 4.4)
   - RxSwiftExt (3.4.0):
     - RxSwiftExt/Core (= 3.4.0)
@@ -45,12 +50,13 @@ PODS:
   - RxSwiftExt/RxCocoa (3.4.0):
     - RxCocoa (~> 4.0)
     - RxSwiftExt/Core
-  - RxTheme (2.2.2):
+  - RxTheme (3.2.1):
     - RxCocoa (~> 4.3)
     - RxSwift (~> 4.3)
-  - RxViewController (0.4.0):
+  - RxViewController (0.4.1):
     - RxCocoa (>= 4.0.0)
     - RxSwift (>= 4.0.0)
+  - SkeletonView (1.4.1)
   - SwifterSwift (4.6.0):
     - SwifterSwift/AppKit (= 4.6.0)
     - SwifterSwift/CoreGraphics (= 4.6.0)
@@ -68,7 +74,7 @@ PODS:
   - SwifterSwift/SpriteKit (4.6.0)
   - SwifterSwift/SwiftStdlib (4.6.0)
   - SwifterSwift/UIKit (4.6.0)
-  - Toaster (2.1.1)
+  - Toast-Swift (4.0.1)
 
 DEPENDENCIES:
   - Carte
@@ -79,12 +85,13 @@ DEPENDENCIES:
   - RxDataSources
   - RxGesture
   - RxOptional
+  - RxSkeleton
   - RxSwift
   - RxSwiftExt
   - RxTheme
   - RxViewController
   - SwifterSwift
-  - Toaster
+  - Toast-Swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -102,35 +109,39 @@ SPEC REPOS:
     - RxDataSources
     - RxGesture
     - RxOptional
+    - RxSkeleton
     - RxSwift
     - RxSwiftExt
     - RxTheme
     - RxViewController
+    - SkeletonView
     - SwifterSwift
-    - Toaster
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Carte: c8200bfb59b77336aa2f02e84cc4ac0fa820034d
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
+  Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Moya-ObjectMapper: c514b5eafcfd5e260f85f7a5bf66895a217e2b37
   "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxGesture: 7f6dfb45dbde06e618c24442d38493e3144f2c95
   RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
-  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  RxSkeleton: b5a29725d68b68cbfdba63214a7f81ef5a2dcb56
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
   RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
-  RxTheme: b58ac61b7062d5a6215d53653a18c2f18f8015a0
-  RxViewController: 359bbc2fda373a78605b2735afb0f9f4f3f6c3e4
+  RxTheme: ec88d3186c5dc80d1037ea3e4edf753ddf3e1fa1
+  RxViewController: e93e7c233d5b5b62c32231d69726d55f54081bc6
+  SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
   SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
-  Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
+  Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
 
-PODFILE CHECKSUM: 37862168b7fc48d95850c8b846172d2a92242e02
+PODFILE CHECKSUM: 1a581a7399a4c36b3d11511e82cacb9c3f1f88e1
 
 COCOAPODS: 1.5.2

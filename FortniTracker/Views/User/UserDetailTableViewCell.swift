@@ -17,6 +17,14 @@ class UserDetailTableViewCell: UITableViewCell {
     
     var disposeBag = DisposeBag()
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        isSkeletonable = true
+        
+        
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         
@@ -26,9 +34,8 @@ class UserDetailTableViewCell: UITableViewCell {
     func bind(to viewModel: UserDetailCellViewModel) {
         
         themeService.rx
-            .bind({ $0.text }, to: titleLabel.rx.textColor)
-            .bind({ $0.text }, to: detailTitleLabel.rx.textColor)
-            .bind({ self.reuseIdentifier == "UserDetailHeaderTableViewCell" ? $0.headerBackground : $0.background }, to: self.rx.backgroundColor)
+            .bind({ $0.text }, to: titleLabel.rx.textColor, detailTitleLabel.rx.textColor)
+            .bind({ self.reuseIdentifier == "UserDetailHeaderTableViewCell" ? $0.headerBackground : $0.background }, to: self.contentView.rx.backgroundColor)
             .disposed(by: disposeBag)
         
         viewModel.title.drive(titleLabel.rx.text).disposed(by: disposeBag)

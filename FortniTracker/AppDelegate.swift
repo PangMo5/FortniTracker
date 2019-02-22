@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 import SwifterSwift
 import Carte
+import SkeletonView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         themeService.rx
             .bind({ $0.statusBarStyle }, to: UIApplication.shared.rx.statusBarStyle)
             .disposed(by: rx.disposeBag)
+
+        themeService.attrsStream
+            .subscribe(onNext: { theme in
+                SkeletonAppearance.default.tintColor = theme.background
+                SkeletonAppearance.default.gradient = theme.skeletonGradient
+            }).disposed(by: rx.disposeBag)
+        
         return true
     }
 
