@@ -21,4 +21,4 @@ Fortnite Tracker for iOS with RxSwift and MVVM architecture
 
 
 ## License
-MIT License. [LICENSE](https://github.com/Shiroukr/FortniTracker/blob/master/LICENSE).
+MIT License. [LICENSE](https://github.com/PangMo5/FortniTracker/blob/master/LICENSE).
