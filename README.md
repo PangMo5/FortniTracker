@@ -5,8 +5,8 @@ Fortnite Tracker for iOS with RxSwift and MVVM architecture
 - [x] DailyStore
 - [x] UpcomingStore
 - [ ] Item Detail
-- [ ] UserSearch(Recent search...)
-- [ ] UserTracking(UI Designing...)
+- [x] UserSearch(Recent search...)
+- [x] UserTracking(UI Designing...)
 - [ ] User, Item Bookmarks
 - [ ] Share
 - [x] Night Theme
